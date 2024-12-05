@@ -1,12 +1,36 @@
 public class TarifasAsistente {
-    public void arraysTarifas(){
-        String[] tarifas = new String[6];
-        tarifas[0] = "Mensual";
-        tarifas[1] = "Anual";
-        tarifas[2] = "Personalizada";
-        tarifas[3] = "Diaria";
-        tarifas[4] = "Promociones";
-        tarifas[5] = "Premium";
+    public void arraysTarifas() {
+        /*String[] tarifas = new String[4];
+        tarifas[0] = "Diaria";
+        tarifas[1] = "Mensual";
+        tarifas[2] = "Anual";
+        tarifas[3] = "Promociones";*/
+
+        String[] tarifaDiaria = new String[3];
+        tarifaDiaria[0] = "1 Dia";
+        tarifaDiaria[1] = "1 Semana";
+        tarifaDiaria[2] = "2 Semanas";
+
+        String[] tarifaMensual = new String[12];
+        tarifaMensual[0] = "1 Mes";
+        tarifaMensual[1] = "2 Meses";
+        tarifaMensual[2] = "3 Meses";
+        tarifaMensual[3] = "4 Meses";
+        tarifaMensual[4] = "5 Meses";
+        tarifaMensual[5] = "6 Meses";
+        tarifaMensual[6] = "7 Meses";
+        tarifaMensual[7] = "8 Meses";
+        tarifaMensual[8] = "9 Meses";
+        tarifaMensual[9] = "10 Meses";
+        tarifaMensual[10] = "11 Meses";
+        tarifaMensual[11] = "12 Meses";
+
+        String[] tarifaAnual = new String[5];
+        tarifaAnual[0] = "1 año";
+        tarifaAnual[1] = "2 años";
+        tarifaAnual[2] = "3 años";
+        tarifaAnual[3] = "4 años";
+        tarifaAnual[4] = "5 años";
 
         String[] promociones = new String[3];
         promociones[0] = "3 meses 5% descuento";
