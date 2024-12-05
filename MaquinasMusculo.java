@@ -17,12 +17,12 @@ public class MaquinasMusculo {
         musculoespalda [3] = "Pull over, 3 Sets, 8-10 Reps, 3-4 Min descanso ";
 
         String [] musculopierna = new String[6];
-        musculoespalda [0] = "Sentadilla, 4 Sets, 3-6 Reps, 4-6 Min descanso";
-        musculoespalda [1] = "Bulgara, 2 Sets, 6-8 Reps, 3-5 Min descanso ";
-        musculoespalda [2] = "Aductor, 3 Sets, 6-10 Reps, 3-4 Min descanso";
-        musculoespalda [3] = "Extension cuadriceps, 3 Sets, 6-10 Reps, 3-4 Min descanso   ";
-        musculoespalda [4] = "Curl Femoral, 3 Sets, 6-10 Reps, 3-4 Min descanso";
-        musculoespalda [5] = "Gemelo levantado, 2 Sets, 6-10 Reps, 3-4 Min descanso";
+        musculopierna [0] = "-Sentadilla, 4 Sets, 3-6 Reps, 4-6 Min descanso-";
+        musculopierna [1] = "-Bulgara, 2 Sets, 6-8 Reps, 3-5 Min descanso-";
+        musculopierna [2] = "-Aductor, 3 Sets, 6-10 Reps, 3-4 Min descanso-";
+        musculopierna [3] = "-Extension cuadriceps, 3 Sets, 6-10 Reps, 3-4 Min descanso-";
+        musculopierna [4] = "-Curl Femoral, 3 Sets, 6-10 Reps, 3-4 Min descanso-";
+        musculopierna [5] = "-Gemelo levantado, 2 Sets, 6-10 Reps, 3-4 Min descanso-";
 
         String [] musculobrazo = new String[6];
         musculobrazo [0] ="Press milirar, 3 Sets, 6-10 Reps, 3-4 Min descanso";
@@ -33,16 +33,19 @@ public class MaquinasMusculo {
         musculobrazo [5] ="Extension en polea, 3 Sets, 6-10 Reps, 3-4 Min descanso ";
 
         MaquinasMusculo1 maquina1 = new MaquinasMusculo1(musculopecho, musculoespalda,musculopierna,musculobrazo);
+        GymApp voler = new GymApp();
 
         int opcion1;
 
-        do{
 
-            System.out.println("Elige el musculo que quieres entrenar ");
-            System.out.println("Musculos de Pecho ");
-            System.out.println("Musculos Espalda ");
-            System.out.println("Musculos Pierna ");
-            System.out.println("Musculos Brazo ");
+        do{
+            System.out.println("Bienvenido al selector de musculos ");
+            System.out.println("Elige el musculo que quieres entrenar: ");
+            System.out.println("1.Musculos de Pecho ");
+            System.out.println("2.Musculos Espalda ");
+            System.out.println("3.Musculos Pierna ");
+            System.out.println("4.Musculos Brazo ");
+            System.out.println("5.Volver al menu Inical ");
 
             opcion1 = sc.nextInt();
 
@@ -60,11 +63,11 @@ public class MaquinasMusculo {
                     maquina1.brazo();
                     break;
                     case 5:
-                        System.out.println("asios");
+                    voler.menu(sc);
                         break;
                 default:
             }
-        }while (opcion1 != 5);
+        }while (opcion1 != 6);
 
         sc.close();
     }

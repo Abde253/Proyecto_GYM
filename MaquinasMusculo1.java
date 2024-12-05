@@ -14,7 +14,7 @@ public class MaquinasMusculo1 {
 
     public void pecho(){
         System.out.println("Musculos de  pecho: ");
-        for (int i = 0; i < musculopecho.length - 1; i++) {
+        for (int i = 0; i < musculopecho.length; i++) {
             System.out.println(musculopecho[i]);
         }
     }
