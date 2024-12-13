@@ -1,14 +1,23 @@
 import java.util.Scanner;
 
+/**
+ * The type Servicios personales.
+ * Esta es la clase que contiene el metodo de servicios/entrenamientos/horarios de los entrenadores
+ */
 public class ServiciosPersonales {
-    public void arraysServicios() {
-        Scanner sc = new Scanner(System.in);
+    /**
+     * Servicios arrays.
+     *
+     * @param sc the sc
+     * Este es el metodo que contiene los arrays con la informacion de cada entrenador (servicios/entrenamientos/horarios)
+     * Estos arrays se recorren con un Bucle For
+     */
+    public void serviciosArrays(Scanner sc){
         String[] horarioJose = new String[4];
         horarioJose[0] = "Crossfit";
         horarioJose[1] = "Pilates";
         horarioJose[2] = "Lunes: 9:00 - 21:00";
         horarioJose[3] = "Miercoles: 10:00 - 22:00";
-
 
         String[] horarioMaria = new String[4];
         horarioMaria[0] = "Clase de HIT";
@@ -22,38 +31,46 @@ public class ServiciosPersonales {
         horarioJuan[2] = "Viernes: 9:00 - 22:00";
         horarioJuan[3] = "Sabado: 9:00 - 17:00";
 
-        Servicios1 serv = new Servicios1(horarioJose, horarioMaria, horarioJuan);
-        //GymApp volver = new GymApp();
-
-        int menu;
+        int opcion;
         do {
+            System.out.println();
             System.out.println("Menu:");
             System.out.println("1. Jose");
             System.out.println("2. Maria");
             System.out.println("3. Juan");
-            System.out.println("4. Volver atras");
+            System.out.println("4. Salir");
             System.out.print("Elige una opcion: ");
 
-            menu = sc.nextInt();
+            opcion = sc.nextInt();
 
-            switch (menu) {
-                case 1:
-                    serv.horarioJose1();
+            switch (opcion) {
+                case 1: 
+                System.out.println();
+                System.out.println("Este es el horario de Jose");
+                    for (int i = 0; i < horarioJose.length; i++) {
+                    System.out.println(horarioJose[i]);
+                }
                     break;
-                case 2:
-                    serv.horarioMaria1();
+                case 2: 
+                System.out.println();
+                System.out.println("Este es el horario de Maria");
+                    for (int i = 0; i < horarioMaria.length; i++) {
+                    System.out.println(horarioMaria[i]);
+                }
                     break;
-                case 3:
-                    serv.horarioJuan1();
+                case 3: 
+                System.out.println();
+                System.out.println("Este es el horario de Juan");
+                    for (int i = 0; i < horarioJuan.length; i++) {
+                    System.out.println(horarioJuan[i]);
+                }
                     break;
-                case 4:
-                    //volver.menu(sc);
+                case 4: System.out.println("Saliendo...");
                     break;
                 default:
                     System.out.println("Opcion Invalida.");
+                    break;
             }
-        } while (menu != 4);
-
-        sc.close();
+        } while (opcion != 4);
     }
 }
